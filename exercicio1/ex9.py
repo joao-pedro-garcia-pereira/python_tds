@@ -16,8 +16,13 @@ while True:
         senha2 = getpass.getpass ("Digite sua senha: ")
         if senha2 == senha:
             while True:
+                os.system('cls')
                 print(f'Olá  {nome}')
-                escolha = int(input('Numero 1 (deposito)/n Numero 2 (saque)/n Numero 3 (extrato)/n Numero 4 (sair)'))
+                print('------Depósito 1------')
+                print('-------Saque 2--------')
+                print('------Extrato 3-------')
+                print('-------Sair 4---------')
+                escolha = int(input('o que vai querer?'))
                 if escolha == 1:
                     os.system('cls')
                     print('Quanto deseja depositar? ')
@@ -25,7 +30,7 @@ while True:
                     saldo += deposito
                 if escolha == 2:
                     os.system('cls')
-                    print('Quanto deseja sacar? ')
+                    print(f'Quanto deseja sacar? Saldo atual é de R${saldo}')
                     saque = int(input('Digite o valor que ira sacar: '))
                     saldo -= saque
                 if escolha == 3:
@@ -35,6 +40,8 @@ while True:
                 if escolha == 4:
                     os.system('cls')
                     break
+                
+
             
         else: 
 
